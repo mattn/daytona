@@ -67,9 +67,9 @@ curl -sf -L https://download.daytona.io/daytona/get-server.sh | DAYTONA_PATH=/ho
 Run the following command in Windows PowerShell:
 
 ```pwsh
-md -Force "$Env:APPDATA\daytona"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
-    Invoke-WebRequest -URI "https://download.daytona.io/daytona/latest/daytona-windows-amd64.exe" -o $Env:APPDATA\daytona\daytona.exe;
-    $env:Path += ";" + $Env:APPDATA + "\daytona";
+md -Force "$Env:APPDATA\bin\daytona"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
+    Invoke-WebRequest -URI "https://download.daytona.io/daytona/latest/daytona-windows-amd64.exe" -o $Env:APPDATA\bin\daytona\daytona.exe;
+    $env:Path += ";" + $Env:APPDATA + "\bin\daytona";
     [Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::User);
     daytona;
 ```
@@ -80,9 +80,9 @@ md -Force "$Env:APPDATA\daytona"; [System.Net.ServicePointManager]::SecurityProt
 Run the following command in Windows PowerShell:
 
 ```pwsh
-md -Force "$Env:APPDATA\daytona"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
-    Invoke-WebRequest -URI "https://download.daytona.io/daytona/latest/daytona-windows-arm64.exe" -o $Env:APPDATA\daytona\daytona.exe;
-    $env:Path += ";" + $Env:APPDATA + "\daytona";
+md -Force "$Env:APPDATA\bin\daytona"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
+    Invoke-WebRequest -URI "https://download.daytona.io/daytona/latest/daytona-windows-arm64.exe" -o $Env:APPDATA\bin\daytona\daytona.exe;
+    $env:Path += ";" + $Env:APPDATA + "\bin\daytona";
     [Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::User);
     daytona;
 ```

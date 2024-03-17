@@ -30,7 +30,7 @@ var DeleteCmd = &cobra.Command{
 		if allFlag {
 			if yesFlag {
 				fmt.Println("Deleting all workspaces.")
-				err := deleteAllWorkspaces()
+				err := DeleteAllWorkspaces()
 				if err != nil {
 					log.Fatal(err)
 				}
@@ -50,7 +50,7 @@ var DeleteCmd = &cobra.Command{
 				}
 
 				if yesFlag {
-					err := deleteAllWorkspaces()
+					err := DeleteAllWorkspaces()
 					if err != nil {
 						log.Fatal(err)
 					}
@@ -119,7 +119,7 @@ func init() {
 	DeleteCmd.Flags().BoolVarP(&yesFlag, "yes", "y", false, "Confirm deletion without prompt")
 }
 
-func deleteAllWorkspaces() error {
+func DeleteAllWorkspaces() error {
 	ctx := context.Background()
 	apiClient, err := server.GetApiClient(nil)
 	if err != nil {

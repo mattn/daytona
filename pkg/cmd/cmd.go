@@ -61,6 +61,7 @@ func Execute() {
 		rootCmd.AddCommand(ProfileUseCmd)
 		rootCmd.AddCommand(whoamiCmd)
 		rootCmd.AddCommand(ProviderCmd)
+		rootCmd.AddCommand(pruneCmd)
 	}
 
 	rootCmd.CompletionOptions.HiddenDefaultCmd = true
